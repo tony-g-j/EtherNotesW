@@ -1,418 +1,289 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
 }
 
-.index_1 .v1_3 {
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   width: 100%;
-  height: 1117px;
-  background: rgb(38, 50, 56);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
 }
-.index_1 .v6_139 {
-  width: 800px;
-  height: 1026px;
-  background: rgb(96, 125, 139);
-  opacity: 1;
-  position: absolute;
-  top: 46px;
-  left: 464px;
-  border-radius: 50px;
-  overflow: hidden;
+
+label {
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 300;
 }
-.index_1 .v6_141 {
-  width: 725px;
-  height: 120px;
-  background: rgb(255, 255, 255);
-  opacity: 1;
-  position: absolute;
-  top: 216px;
-  left: 38px;
-  border-radius: 25px;
-  overflow: hidden;
-}
-.index_1 .v6_149 {
-  width: 333px;
-  color: rgb(0, 0, 0);
-  position: absolute;
-  top: 33px;
-  left: 29px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
-}
-.index_1 .v6_147 {
-  width: 725px;
-  height: 120px;
-  background: rgb(255, 255, 255);
-  opacity: 1;
-  position: absolute;
-  top: 389px;
-  left: 38px;
-  border-radius: 25px;
-  overflow: hidden;
-}
-.index_1 .v6_150 {
-  width: 333px;
-  color: rgb(0, 0, 0);
-  position: absolute;
-  top: 34px;
-  left: 18px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
-}
-.index_1 .v6_152 {
-  width: 725px;
-  height: 120px;
-  background: rgb(255, 255, 255);
-  opacity: 1;
-  position: absolute;
-  top: 561px;
-  left: 38px;
-  border-radius: 25px;
-  overflow: hidden;
-}
-.index_1 .v6_153 {
-  width: 333px;
-  color: rgb(0, 0, 0);
-  position: absolute;
-  top: 34px;
-  left: 18px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
-}
-.index_1 .v6_125 {
-  width: 339px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 44px;
-  left: 222px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 70px;
-  opacity: 1;
-  text-align: left;
-}
-.index_1 .v8_161 {
-  width: 545px;
-  height: 96px;
-  background: rgba(85, 125, 144, 0.8999999762);
-  opacity: 1;
-  position: absolute;
-  top: 966px;
-  left: 600px;
+
+.input-field {
+  height: 70px;
+  background: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
+  border: none;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  width: 100%;
+  color: #000000;
 }
-.index_1 .v8_170 {
-  width: 496px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 990px;
-  left: 624px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-weight: Regular;
-  font-size: 36px;
-  opacity: 1;
+.input-field:focus {
+  outline: 2px solid rgba(85, 125, 144, 0.9);
+}
+
+.btn {
+  height: 61px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.25rem;
+  font-family: "Istok Web", sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.btn-primary {
+  background: #1e1e1e;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #000000;
+  gap: 10px;
+}
+.btn-secondary .btn-icon {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.pagina-login {
+  background-color: #546e7a;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background: #263238;
+  border-radius: 15px;
+}
+
+.login-header {
   text-align: center;
 }
-.index_1 .v6_155 {
-  width: 271px;
-  height: 61px;
-  background: rgb(255, 255, 255);
-  opacity: 1;
-  position: absolute;
-  top: 757px;
-  left: 718px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.index_1 .v6_156 {
-  width: 53px;
-  height: 53px;
-  background: url("../images/v6_156.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 4px;
-  left: 15px;
-  overflow: hidden;
-}
-.index_1 .v6_157 {
-  width: 101px;
-  color: rgb(0, 0, 0);
-  position: absolute;
-  top: 8px;
-  left: 117px;
+.login-header h1 {
   font-family: "Istok Web", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.login-header h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
-.index_2 .v1_2 {
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   width: 100%;
-  height: 1117px;
-  background: rgb(55, 71, 79);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
 }
-.index_2 .v25_102 {
-  width: 828px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 138px;
-  left: 496px;
+
+.login-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.pagina-registro {
+  background-color: #263238;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  background: #607d8b;
+  border-radius: 50px;
+}
+
+.register-header h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
   font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  opacity: 1;
-  text-align: left;
 }
-.index_2 .name {
-  color: rgb(255, 255, 255);
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
 }
-.index_2 .v25_155 {
-  width: 287px;
-  height: 189px;
+.register-form label {
+  font-size: 2rem;
+  color: #000000;
+}
+.register-form .btn-primary {
+  background: rgba(85, 125, 144, 0.9);
+  color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.8rem;
+  max-width: 545px;
+  margin-top: 20px;
+}
+.register-form .btn-secondary {
+  max-width: 271px;
+  font-size: 1.5rem;
+}
+
+.register-footer {
+  margin-top: 20px;
+}
+.register-footer a {
+  color: #000000;
+  font-size: 1.1rem;
+}
+
+.pagina-principal {
+  background-color: #37474f;
+  color: #ffffff;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  flex-basis: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid #546e7a;
+}
+
+.sidebar-header h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #546e7a;
+}
+
+.sidebar-nav {
+  list-style: none;
+  margin-top: 20px;
+}
+.sidebar-nav li a {
+  display: block;
+  padding: 12px 10px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+.sidebar-nav li a:hover {
+  background-color: #546e7a;
+  text-decoration: none;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-content h1 {
+  font-size: 2.5rem;
+}
+.main-content p, .main-content ol {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 80ch;
+}
+.main-content ol {
+  padding-left: 30px;
+}
+
+.right-panel {
+  flex-shrink: 0;
+  flex-basis: 320px;
+  border-left: 1px solid #546e7a;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.right-panel section h3 {
+  font-size: 1.25rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #546e7a;
+}
+.right-panel .node-placeholder {
+  width: 100%;
+  height: 190px;
+  background: #546e7a;
+  border-radius: 10px;
+  margin-top: 15px;
   background: url("../images/v25_155.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 295px;
-  left: 1434px;
-  overflow: hidden;
 }
-.index_2 .v25_182 {
-  width: 261px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 115px;
-  left: 1438px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 30px;
-  opacity: 1;
-  text-align: left;
+.right-panel .linked-mentions h4 {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #aaa;
 }
-.index_2 .v25_183 {
-  width: 261px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 572px;
-  left: 1438px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 30px;
-  opacity: 1;
-  text-align: left;
-}
-.index_2 .v25_188 {
-  width: 279px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 632px;
-  left: 1424px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.index_3 .v1_5 {
-  width: 100%;
-  height: 1117px;
-  background: rgba(84, 110, 122, 0.9058823586);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
-.index_3 .v1_10 {
-  width: 458px;
-  height: 167px;
-  background: rgb(38, 50, 56);
-  opacity: 1;
-  position: absolute;
-  top: 96px;
-  left: 628px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.index_3 .v1_7 {
-  width: 232px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 60px;
-  left: 112px;
-  font-family: "Istok Web", sans-serif;
-  font-weight: Regular;
-  font-size: 40px;
-  opacity: 1;
-  text-align: left;
-}
-.index_3 .v1_8 {
-  width: 350px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 307px;
-  left: 689px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.index_3 .v1_1052 {
-  width: 570px;
-  height: 90px;
-  background: rgb(255, 255, 255);
-  opacity: 1;
-  position: absolute;
-  top: 469px;
-  left: 579px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.index_3 .v1_1054 {
-  width: 281px;
-  color: url("../images/v1_1054.png");
-  position: absolute;
-  top: 417px;
-  left: 579px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
-}
-.index_3 .v1_1056 {
-  width: 570px;
-  height: 90px;
-  background: rgb(255, 255, 255);
-  opacity: 1;
-  position: absolute;
-  top: 661px;
-  left: 579px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.index_3 .v1_1058 {
-  width: 175px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 598px;
-  left: 579px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
-}
-.index_3 .v1_1066 {
-  width: 319px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 962px;
-  left: 419px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
-}
-.index_3 .v1_1067 {
-  width: 172px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 962px;
-  left: 1063px;
-  font-family: "Inter", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
-}
-.index_3 .v1_1098 {
-  width: 342px;
-  height: 61px;
-  background: rgb(30, 30, 30);
-  opacity: 1;
-  position: absolute;
-  top: 771px;
-  left: 693px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.index_3 .v1_1099 {
-  width: 231px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 2px;
-  left: 55px;
-  font-family: "Istok Web", sans-serif;
-  font-weight: Regular;
-  font-size: 40px;
-  opacity: 1;
-  text-align: left;
-}
-.index_3 .v1_1113 {
-  width: 271px;
-  height: 61px;
-  background: rgb(255, 255, 255);
-  opacity: 1;
-  position: absolute;
-  top: 852px;
-  left: 728px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.index_3 .v1_1118 {
-  width: 53px;
-  height: 53px;
-  background: url("../images/v1_1118.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 4px;
-  left: 15px;
-  overflow: hidden;
-}
-.index_3 .v1_1120 {
-  width: 101px;
-  color: rgb(0, 0, 0);
-  position: absolute;
-  top: 8px;
-  left: 117px;
-  font-family: "Istok Web", sans-serif;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
+.right-panel .linked-mentions p {
+  font-size: 0.9rem;
+  line-height: 1.4;
 }/*# sourceMappingURL=style.css.map */
