@@ -1,441 +1,336 @@
+
 // Colores
-$color-white: rgba(255, 255, 255, 1);
-$color-black: rgba(0, 0, 0, 1);
-$color-dark-bg: rgba(38, 50, 56, 1);
-$color-dark-grey: rgba(55, 71, 79, 1);
-$color-medium-grey-bg: rgba(84, 110, 122, 0.9058823585510254);
-$color-light-grey-bg: rgba(96, 125, 139, 1);
-$color-dark-button: rgba(30, 30, 30, 1);
-$color-blue-button: rgba(85, 125, 144, 0.8999999761581421);
+$color-white: #ffffff;
+$color-black: #000000;
+$color-text-light: $color-white;
+$color-text-dark: $color-black;
+
+// Fondos
+$bg-dark-1: #263238; // (de main.css .v1_3)
+$bg-dark-2: #37474f; // (de main2.css .v1_2)
+$bg-grey-medium: #546e7a; // (de main3.css .v1_5)
+$bg-grey-light: #607d8b; // (de main.css .v6_139)
+
+// Botones y Acentos
+$btn-primary-bg: #1e1e1e; // (de main3.css .v1_1098)
+$btn-secondary-bg: $color-white;
+$btn-accent-bg: rgba(85, 125, 144, 0.9); // (de main.css v8_161)
 
 // Fuentes
 $font-inter: 'Inter', sans-serif;
-$font-istok-web: 'Istok Web', sans-serif;
-$font-merriweather-sans: 'Merriweather Sans', sans-serif;
+$font-istok: 'Istok Web', sans-serif;
+$font-merriweather: 'Merriweather Sans', sans-serif;
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  font-size: 14px;
+  font-family: $font-inter;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color-text-light;
 }
 
-.index_1 {
-  .v1_3 {
-    width: 100%;
-    height: 1117px;
-    background: $color-dark-bg;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
+a {
+  color: $color-white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
-  .v6_139 {
-    width: 800px;
-    height: 1026px;
-    background: $color-light-grey-bg;
-    opacity: 1;
-    position: absolute;
-    top: 46px;
-    left: 464px;
-    border-radius: 50px;
-    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+label {
+  font-size: 1.25rem;
+  color: $color-text-light;
+  font-weight: 300;
+}
+
+.input-field {
+  height: 70px;
+  background: $color-white;
+  border-radius: 10px;
+  border: none;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  width: 100%;
+  color: $color-text-dark;
+
+  &:focus {
+    outline: 2px solid $btn-accent-bg;
   }
-  .v6_141 {
-    width: 725px;
-    height: 120px;
-    background: $color-white;
-    opacity: 1;
-    position: absolute;
-    top: 216px;
-    left: 38px;
-    border-radius: 25px;
-    overflow: hidden;
+}
+
+.btn {
+  height: 61px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.25rem;
+  font-family: $font-istok;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.btn-primary {
+  background: $btn-primary-bg;
+  color: $color-white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background: $btn-secondary-bg;
+  color: $color-black;
+  gap: 10px; 
+  .btn-icon {
+    font-weight: bold;
+    font-size: 1.2rem;
   }
-  .v6_149 {
-    width: 333px;
-    color: $color-black;
-    position: absolute;
-    top: 33px;
-    left: 29px;
+}
+
+
+
+.pagina-login {
+  background-color: $bg-grey-medium;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  width: 100%;
+  max-width: 500px; 
+  padding: 40px;
+  background: $bg-dark-1;
+  border-radius: 15px;
+}
+
+.login-header {
+  text-align: center;
+  h1 {
+    font-family: $font-istok;
+    font-size: 2.5rem; 
+    margin-bottom: 10px;
+  }
+  h2 {
     font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
+    font-size: 2rem;
+    font-weight: 300;
   }
-  .v6_147 {
-    width: 725px;
-    height: 120px;
-    background: $color-white;
-    opacity: 1;
-    position: absolute;
-    top: 389px;
-    left: 38px;
-    border-radius: 25px;
-    overflow: hidden;
-  }
-  .v6_150 {
-    width: 333px;
-    color: $color-black;
-    position: absolute;
-    top: 34px;
-    left: 18px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v6_152 {
-    width: 725px;
-    height: 120px;
-    background: $color-white;
-    opacity: 1;
-    position: absolute;
-    top: 561px;
-    left: 38px;
-    border-radius: 25px;
-    overflow: hidden;
-  }
-  .v6_153 {
-    width: 333px;
-    color: $color-black;
-    position: absolute;
-    top: 34px;
-    left: 18px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v6_125 {
-    width: 339px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; 
+  width: 100%;
+}
+
+.login-footer {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.pagina-registro {
+  background-color: $bg-dark-1;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  background: $bg-grey-light;
+  border-radius: 50px;
+}
+
+.register-header {
+  h1 {
+    font-size: 3.5rem; 
     color: $color-white;
-    position: absolute;
-    top: 44px;
-    left: 222px;
     font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 70px;
-    opacity: 1;
-    text-align: left;
   }
-  .v8_161 {
-    width: 545px;
-    height: 96px;
-    background: $color-blue-button;
-    opacity: 1;
-    position: absolute;
-    top: 966px;
-    left: 600px;
-    border-radius: 10px;
-    overflow: hidden;
+}
+
+.register-form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px; 
+  
+  label {
+    font-size: 2rem;
+    color: $color-black;
   }
-  .v8_170 {
-    width: 496px;
+  
+  .btn-primary {
+    background: $btn-accent-bg;
     color: $color-white;
-    position: absolute;
-    top: 990px;
-    left: 624px;
-    font-family: $font-merriweather-sans;
-    font-weight: Regular;
-    font-size: 36px;
-    opacity: 1;
+    font-family: $font-merriweather;
+    font-size: 1.8rem;
+    max-width: 545px; 
+    margin-top: 20px;
+  }
+  
+  .btn-secondary {
+    max-width: 271px; 
+    font-size: 1.5rem; 
+  }
+}
+
+.register-footer {
+  margin-top: 20px;
+  a {
+    color: $color-black;
+    font-size: 1.1rem;
+  }
+}
+
+.pagina-principal {
+  background-color: $bg-dark-2;
+  color: $color-text-light;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  flex-basis: 280px;
+  display: flex;
+  flex-direction: column;
+  
+  padding: 20px;
+  border-right: 1px solid $bg-grey-medium;
+}
+
+.sidebar-header {
+  h2 {
+    font-size: 2rem;
     text-align: center;
-  }
-  .v6_155 {
-    width: 271px;
-    height: 61px;
-    background: $color-white;
-    opacity: 1;
-    position: absolute;
-    top: 757px;
-    left: 718px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .v6_156 {
-    width: 53px;
-    height: 53px;
-    background: url("../images/v6_156.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 4px;
-    left: 15px;
-    overflow: hidden;
-  }
-  .v6_157 {
-    width: 101px;
-    color: $color-black;
-    position: absolute;
-    top: 8px;
-    left: 117px;
-    font-family: $font-istok-web;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $bg-grey-medium;
   }
 }
 
-.index_2 {
-  .v1_2 {
-    width: 100%;
-    height: 1117px;
-    background: $color-dark-grey;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-  }
-  .v25_102 {
-    width: 828px;
-    color: $color-white;
-    position: absolute;
-    top: 138px;
-    left: 496px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    opacity: 1;
-    text-align: left;
-  }
+.sidebar-nav {
+  list-style: none;
+  margin-top: 20px;
   
-  .name {
-    color: $color-white;
-  }
-  
-  .v25_155 {
-    width: 287px;
-    height: 189px;
-    background: url("../images/v25_155.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 295px;
-    left: 1434px;
-    overflow: hidden;
-  }
-  .v25_182 {
-    width: 261px;
-    color: $color-white;
-    position: absolute;
-    top: 115px;
-    left: 1438px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v25_183 {
-    width: 261px;
-    color: $color-white;
-    position: absolute;
-    top: 572px;
-    left: 1438px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 30px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v25_188 {
-    width: 279px;
-    color: $color-white;
-    position: absolute;
-    top: 632px;
-    left: 1424px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 20px;
-    opacity: 1;
-    text-align: left;
+  li a {
+    display: block;
+    padding: 12px 10px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    
+    &:hover {
+      background-color: $bg-grey-medium;
+      text-decoration: none;
+    }
   }
 }
 
-.index_3 {
-  .v1_5 {
+.main-content {
+  flex-grow: 1; 
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  p, ol {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 80ch;
+  }
+  ol {
+    padding-left: 30px;
+  }
+}
+
+.right-panel {
+  flex-shrink: 0;
+  flex-basis: 320px;
+  border-left: 1px solid $bg-grey-medium;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+
+  section {
+    h3 {
+      font-size: 1.25rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $bg-grey-medium;
+    }
+  }
+  
+  .node-placeholder {
     width: 100%;
-    height: 1117px;
-    background: $color-medium-grey-bg;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-  }
-  .v1_10 {
-    width: 458px;
-    height: 167px;
-    background: $color-dark-bg;
-    opacity: 1;
-    position: absolute;
-    top: 96px;
-    left: 628px;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  .v1_7 {
-    width: 232px;
-    color: $color-white;
-    position: absolute;
-    top: 60px;
-    left: 112px;
-    font-family: $font-istok-web;
-    font-weight: Regular;
-    font-size: 40px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v1_8 {
-    width: 350px;
-    color: $color-white;
-    position: absolute;
-    top: 307px;
-    left: 689px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 48px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v1_1052 {
-    width: 570px;
-    height: 90px;
-    background: $color-white;
-    opacity: 1;
-    position: absolute;
-    top: 469px;
-    left: 579px;
+    height: 190px;
+    background: $bg-grey-medium;
     border-radius: 10px;
-    overflow: hidden;
+    margin-top: 15px;
+    background: url('../images/v25_155.png');
   }
-  .v1_1054 {
-    width: 281px;
-    color: url("../images/v1_1054.png"); // Nota: Esto es inusual, color no suele ser una URL
-    position: absolute;
-    top: 417px;
-    left: 579px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v1_1056 {
-    width: 570px;
-    height: 90px;
-    background: $color-white;
-    opacity: 1;
-    position: absolute;
-    top: 661px;
-    left: 579px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .v1_1058 {
-    width: 175px;
-    color: $color-white;
-    position: absolute;
-    top: 598px;
-    left: 579px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v1_1066 {
-    width: 319px;
-    color: $color-white;
-    position: absolute;
-    top: 962px;
-    left: 419px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v1_1067 {
-    width: 172px;
-    color: $color-white;
-    position: absolute;
-    top: 962px;
-    left: 1063px;
-    font-family: $font-inter;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v1_1098 {
-    width: 342px;
-    height: 61px;
-    background: $color-dark-button;
-    opacity: 1;
-    position: absolute;
-    top: 771px;
-    left: 693px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .v1_1099 {
-    width: 231px;
-    color: $color-white;
-    position: absolute;
-    top: 2px;
-    left: 55px;
-    font-family: $font-istok-web;
-    font-weight: Regular;
-    font-size: 40px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v1_1113 {
-    width: 271px;
-    height: 61px;
-    background: $color-white;
-    opacity: 1;
-    position: absolute;
-    top: 852px;
-    left: 728px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .v1_1118 {
-    width: 53px;
-    height: 53px;
-    background: url("../images/v1_1118.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 4px;
-    left: 15px;
-    overflow: hidden;
-  }
-  .v1_1120 {
-    width: 101px;
-    color: $color-black;
-    position: absolute;
-    top: 8px;
-    left: 117px;
-    font-family: $font-istok-web;
-    font-weight: Regular;
-    font-size: 32px;
-    opacity: 1;
-    text-align: left;
+  
+  .linked-mentions {
+    h4 {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #aaa;
+    }
+    p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
   }
 }

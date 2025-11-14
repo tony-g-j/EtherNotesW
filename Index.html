@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap"
       rel="stylesheet"
@@ -10,23 +12,36 @@
       rel="stylesheet"
     />
     <link href="./assets/css/style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Inicio Sesión - ETERNOTES</title>
   </head>
-  <body class="index_3">
-    <div class="v1_5">
-      <div class="v1_10"><span class="v1_7">ETERNOTES</span></div>
-      <span class="v1_8">Inicio de sesión</span>
-      <div class="v1_1052"></div>
-      <span class="v1_1054">Correo electrónico</span>
-      <div class="v1_1056"></div>
-      <span class="v1_1058">Contraseña</span
-      ><span class="v1_1066">Olvide mi contraseña</span
-      ><span class="v1_1067">Registrarse</span>
-      <div class="v1_1098"><span class="v1_1099">Iniciar sesión</span></div>
-      <div class="v1_1113">
-        <div class="v1_1118"></div>
-        <span class="v1_1120">Google</span>
+  <body class="pagina-login">
+    <main class="login-container">
+      <div class="login-header">
+        <h1>ETERNOTES</h1>
+        <h2>Inicio de sesión</h2>
       </div>
-    </div>
+      <form class="login-form">
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" class="input-field" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" class="input-field" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        
+        <button type="button" class="btn btn-secondary btn-google">
+          <span class="btn-icon">G</span>
+          <span class="btn-text">Entrar con Google</span>
+        </button>
+      </form>
+      <div class="login-footer">
+        <a href="#">Olvide mi contraseña</a>
+        <a href="reg.html">Registrarse</a>
+      </div>
+    </main>
   </body>
 </html>
