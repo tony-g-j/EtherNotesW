@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ETERNOTES - Inicio de sesión</title>
+
+  <!-- Fuente opcional (Inter). Puedes quitar esta línea si no la necesitas -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #263238;        
+      --card-bg: #607D8B;   /* Fondo del formulario */
+      --text: #1f2937;      /* Texto principal */
+      --muted: #fafafa;     /* Texto secundario */
+      --input-bg: #f3f4f6;  /* Fondo de inputs */
+      --border: #e5e7eb;    /* Borde suave */
+      --btn-bg: #000000;    /* Botón negro */
+      --btn-text: #ffffff;  /* Texto del botón */
+      --link: #111827;      /* Links oscuros */
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      padding: 28px;
+    }
+
+    .brand {
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #9aa3af;
+      box-shadow: 0 0 0 3px rgba(153, 163, 175, 0.25);
+    }
+
+    .btn {
+      width: 100%;
+      display: inline-block;
+      padding: 12px 16px;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.05s ease, opacity 0.2s ease;
+      margin-top: 6px;
+    }
+
+    .btn:hover { opacity: 0.95; }
+    .btn:active { transform: translateY(1px); }
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .link {
+      color: var(--link);
+      font-size: 13px;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .link:hover {
+      color: #0b0f14;
+      border-color: #0b0f14;
+    }
+
+    /* Accesibilidad y mobile tweaks */
+    @media (max-width: 420px) {
+      .card { padding: 22px; }
+      .brand { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card" aria-label="Formulario de inicio de sesión">
+      <div class="brand">ETERNOTES</div>
+      <div class="subtitle">Inicio de sesión</div>
+
+      <form action="#" method="post" novalidate>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="nombre@correo.com" autocomplete="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+        </div>
+
+        <button type="submit" class="btn">Iniciar sesión</button>
+
+        <div class="links">
+          <a class="link" href="#olvide">Olvide mi contraseña</a>
+          <a class="link" href="#registrarse">Registrarse</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
