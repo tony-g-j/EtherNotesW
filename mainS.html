@@ -1,14 +1,115 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"/>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="./assets/css/style.css" rel="stylesheet" />
-    <title>Página Principal - ETERNOTES</title>
+    <title>Mis Apuntes - ETERNOTES</title>
+    <style>
+        .search-bar {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .chests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .chest-card {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+        }
+        .chest-card:hover {
+            transform: translateY(-5px);
+            background: #34495e;
+        }
+        .chest-icon { font-size: 2.5rem; color: #f1c40f; }
+
+        .note-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-left: 4px solid transparent;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+        .note-item:hover {
+            border-left: 4px solid #3498db;
+            transform: translateX(5px);
+        }
+        .note-meta { font-size: 0.8rem; color: #7f8c8d; margin-top: 5px; }
+
+        .note-content-view {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            min-height: 60vh;
+            line-height: 1.6;
+        }
+        .mention-link {
+            color: #3498db;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            background: #ebf5fb;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .mention-link:hover { text-decoration: underline; }
+
+        .linked-card {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            border: 1px solid #e0e0e0;
+            cursor: pointer;
+        }
+        .linked-card:hover { border-color: #3498db; }
+        .linked-context {
+            font-size: 0.8rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 4px;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 15px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .breadcrumb:hover { color: #2c3e50; text-decoration: underline; }
+
+    </style>
   </head>
   <body class="pagina-principal">
     
@@ -17,50 +118,51 @@
       <nav class="sidebar">
         <div class="sidebar-header">
           <h2>ETERNOTES</h2>
+          <p id="welcomeUser" style="color: #ccc; font-size: 0.9rem; margin-top: 5px;">Cargando...</p>
         </div>
 
         <ul class="sidebar-nav">
-          <li><a href="#">Elemento 1</a></li>
-          <li><a href="#">Elemento 2</a></li>
-          <li><a href="#">Elemento 3</a></li>
-          <li><a href="#">Elemento 4</a></li>
-          <li><a href="#">Elemento 5</a></li>
+          <li><a href="#" onclick="loadChests()"><i class="fa-solid fa-box-archive"></i> Mis Baúles</a></li>
+          <li><a href="#"><i class="fa-solid fa-clock"></i> Recientes</a></li>
+          <li><a href="#"><i class="fa-solid fa-star"></i> Favoritos</a></li>
+          <li><a href="#"><i class="fa-solid fa-tags"></i> Etiquetas</a></li>
+          <li style="margin-top: 20px;">
+            <a href="#" id="logoutBtn" style="color: #ff6b6b;"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+          </li>
         </ul>
       </nav>
+
       <main class="main-content">
-        <h1>Header 1</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <ol>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ol>
+        
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass" style="color: #95a5a6;"></i>
+            <input type="text" id="globalSearchInput" placeholder="Buscar notas, ideas o etiquetas..." onkeyup="handleGlobalSearch(event)">
+        </div>
+
+        <div id="app-view">
+            <p style="text-align:center; margin-top:50px;">Cargando baúles...</p>
+        </div>
+
       </main>
+
       <aside class="right-panel">
         <section class="node-view">
-          <h3>Node View</h3>
-          <div class="node-placeholder"></div> 
+          <h3>Mapa de Ideas</h3>
+          <div class="node-placeholder" style="display:flex; justify-content:center; align-items:center; background:#ecf0f1;">
+            <i class="fa-solid fa-circle-nodes" style="font-size: 3rem; color: #bdc3c7;"></i>
+          </div> 
         </section>
         
         <section class="linked-mentions">
-          <h3>Linked Mentions</h3>
-          <div class="subgroup">
-            <h4>Subgroup 1:</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <h3>Menciones Vinculadas</h3>
+          <div id="mentions-list">
+            <p style="color: #95a5a6; font-size: 0.9rem;">Selecciona una nota para ver sus conexiones.</p>
           </div>
         </section>
       </aside>
       
     </div>
+
+    <script src="./assets/js/Script.js"></script>
   </body>
 </html>
